@@ -23,10 +23,10 @@
 				<img src="img/img 2.jpg" class="d-block w-100">
 			</div>
 			<div class="carousel-item" data-bs-interval="15000">
-				<img src="img/Treinamento.png" class="d-block w-100">
+				<img src="img/Campanha.jpeg" class="d-block w-100">
 			</div>
 			<div class="carousel-item" data-bs-interval="15000">
-				<img src="img/Campanha.png" class="d-block w-100">
+				<img src="img/Treinamento.png" class="d-block w-100">
 			</div>
 			<div class="carousel-item" data-bs-interval="15000">
 				<img src="img/Motivacao.png" class="d-block w-100">
@@ -43,32 +43,23 @@
 		<input style="text-align: center; background-color: white;" type="button" value="Quer tela cheia?"
 			onclick="requestFullScreen()">
 		<p style="display: inline; margin-left: 75%;">Desenvolvido por TI AGILLE</p>
-
-		<script>
-			function requestFullScreen() {
-
-				var el = document.body;
-
-				// suportar mais navegadores.
-				var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen
-					|| el.mozRequestFullScreen || el.msRequestFullScreen;
-
-				if (requestMethod) {
-
-					requestMethod.call(el);
-
-				} else if (typeof window.ActiveXObject !== "undefined") {
-
-					var wscript = new ActiveXObject("WScript.Shell");
-
-					if (wscript !== null) {
-						wscript.SendKeys("{F11}");
-					}
+	</footer>
+	<script>
+		function requestFullScreen() {
+			var el = document.body;
+			// suportar mais navegadores.
+			var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen
+				|| el.mozRequestFullScreen || el.msRequestFullScreen;
+			if (requestMethod) {
+				requestMethod.call(el);
+			} else if (typeof window.ActiveXObject !== "undefined") {
+				var wscript = new ActiveXObject("WScript.Shell");
+				if (wscript !== null) {
+					wscript.SendKeys("{F11}");
 				}
 			}
-		</script>
-
-	</footer>
+		}
+	</script>
 </body>
 
 </html>
