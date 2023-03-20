@@ -74,22 +74,7 @@
 			onclick="requestFullScreen()">
 		<p style="display: inline; margin-left: 75%;">Desenvolvido por TI AGILLE</p>
 	</footer>
-	<script>
-		function requestFullScreen() {
-			var el = document.body;
-			// suportar mais navegadores.
-			var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen
-				|| el.mozRequestFullScreen || el.msRequestFullScreen;
-			if (requestMethod) {
-				requestMethod.call(el);
-			} else if (typeof window.ActiveXObject !== "undefined") {
-				var wscript = new ActiveXObject("WScript.Shell");
-				if (wscript !== null) {
-					wscript.SendKeys("{F11}");
-				}
-			}
-		}
-	</script>
+	<script src="script.js"></script>
 </body>
 
 </html>
