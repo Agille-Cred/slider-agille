@@ -1,18 +1,15 @@
 fetch("https://api.github.com/repos/Agille-Cred/slider-agille/branches/master")
-
     .then(function (response) {
         if (response.ok) {
             return response.json();
         } else {
-            throw new Error('Error: ' + response.status);
+            console.error("Erro ao buscar data do último commit")
         }
     })
-
     .then(function (data) {
         if (data.commit.commit.author.date) {
             try {
                 var lastCommitDate = new Date(data.commit.commit.author.date);
-                console.log("Last commit date: " + convertDate(lastCommitDate));
                 setFooterText("Última atualização: " + convertDate(lastCommitDate));
             } catch (error) {
                 console.error(error)
